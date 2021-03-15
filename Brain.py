@@ -9,26 +9,25 @@ def search():
     pass
 
 
-def display_wanty():
-    pass
+def display_wanty_Marina():
+    wanties = ['Хотелка 1', 'Хотелка 2', 'Хотелка 3']
+    return wanties
+
+
+def display_wanty_Artem():
+    wanties = ['Хотелка 1', 'Хотелка 2', 'Хотелка 3']
+    return wanties
+
+
+def display_wanty_flat():
+    wanties = ['Хотелка 1', 'https://pokupki.market.yandex.ru/product/nabor-konfet-ferrero-rocher-iz-molochnogo-shokolada-s-nachinkoi-iz-krema-i-lesnogo-orekha-200-g-5-sht/100861914404?offerid=LXBXV1oz-NWRkS_2T7Ii5A&show-uid=16151185833898626688816001', 'Хотелка 3']
+    return wanties
 
 
 def wanty_exists(wanty):
-    reader = csv.reader(open("wanty.csv", "rb"), delimiter=' ', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    for row in reader:
-        if (row == wanty):
-            return True
-    return False
+    pass
 
 
-def add_wanty(name, phone, address, birthday):
-    wanty = [name, phone, address, birthday]
-    if wanty_exists(wanty):
-        return False
+def add_wanty():
+    pass
 
-    writer = csv.writer(open("wanty.csv", "ab"), delimiter=' ', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    writer.writerow(wanty)
-    return True
-
-
-add_wanty('barney', '4321 987', 'New York', '2000')
